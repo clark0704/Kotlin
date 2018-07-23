@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">KotlinProject</string>
+
+    <string name="home_exit">再次点击,退出应用！</string>
+    <string name="requests_for_permissions">权限申请</string>
+    <string name="requests_for_permissions_hint">当前应用缺少必要权限，请点击"设置"-"应用"-"KotlinProject"-"权限"-打开所需权限，以正常使用功能。</string>
+</resources>
