@@ -1,5 +1,9 @@
 package com.lebron.kotlin.ui.activity
 
+/**
+ * @author Lebron
+ * activity 基类
+ */
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import com.gyf.barlibrary.ImmersionBar
@@ -9,6 +13,7 @@ import com.lebron.kotlin.utils.AppManager
 abstract class BaseActivity : AppCompatActivity() {
 
     val TAG = javaClass.simpleName
+    //状态栏信息
     open var immersionBar:ImmersionBar? =null
 
     override fun onCreate(savedInstanceState: Bundle?) {
