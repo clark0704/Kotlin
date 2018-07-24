@@ -10,7 +10,7 @@
 3. activity统一管理
 4. Gif加载（[android-gif-drawable][3]）
 5. 系统意图跳转（跳转到设置等）
-
+   
 
   [1]: https://github.com/gyf-dev/ImmersionBar
   [2]: https://github.com/permissions-dispatcher/PermissionsDispatcher
