@@ -12,7 +12,9 @@ import android.app.AlertDialog
 import android.content.Intent
 import com.lebron.kotlin.utils.AppManager.exitApp
 import com.lebron.kotlin.utils.IntentUtils
+import kotlinx.android.synthetic.main.activity_splash.*
 import permissions.dispatcher.OnPermissionDenied
+import pl.droidsonroids.gif.GifDrawable
 
 @RuntimePermissions
 class SplashActivity : BaseActivity() {
@@ -30,13 +32,23 @@ class SplashActivity : BaseActivity() {
     override fun initData() {
     }
 
+    override fun isBlack(): Boolean {
+        return true
+    }
+
     /**
      * 权限申请成功后执行
      */
     @NeedsPermission(Manifest.permission.READ_PHONE_STATE, Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE)
     fun requestPermission() {
-        startActivity(Intent(this,MainActivity::class.java))
-        finish()
+
+        val gifDrawable = GifDrawable(resources,R.drawable.gif_loading)
+        gifDrawable.addAnimationListener {
+            startActivity(Intent(this,MainActivity::class.java))
+            finish()
+        }
+        loading_view.setImageDrawable(gifDrawable)
+
     }
 
     @SuppressLint("NeedOnRequestPermissionsResult")

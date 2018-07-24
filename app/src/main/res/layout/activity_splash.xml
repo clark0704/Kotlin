@@ -6,11 +6,11 @@
     tools:context=".ui.activity.SplashActivity">
 
 
-    <ImageView
+    <com.lebron.kotlin.ui.widget.MyGifImageView
         android:id="@+id/loading_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:ignore="ContentDescription"
         android:scaleType="fitXY"
-        android:src="@drawable/ic_launcher_background"/>
+        android:src="@drawable/img_loading"/>
 </android.support.constraint.ConstraintLayout>

@@ -17,6 +17,10 @@ class MainActivity : BaseActivity() {
             toast("textView被点击了"+count++)
         }
     }
+    override fun isBlack(): Boolean {
+        return true
+    }
+
 
     override fun getLayoutId(): Int {
         return R.layout.activity_main
